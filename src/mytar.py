@@ -61,12 +61,9 @@ tarCommand = argv[1:]                                       # Takes TAR command 
     
 command = tarCommand[0].lower()                             # c or x
 
-if(command == 'c'):                                         # Check if command valid "c"
-    os.write(1,"Creating...\n".encode())
-
+if(command == 'c'):                                         # Check if command valid "c"zzzzzzzzzzz
     create(tarCommand[1:3])                                 # create and store in .tar
 
-if(tarCommand[0].lower() == 'x'):                           # Check if command valid "x"
-    os.write(1,"Extracting...\n".encode())                  
+if(command == 'x'):                                         # Check if command valid "x"                
     tar = tarCommand[1]
     extract(tar)                                            # Extract files from .tar
