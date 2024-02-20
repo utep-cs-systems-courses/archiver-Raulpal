@@ -2,7 +2,7 @@ import os
 import re
 
 # Creates tar file similar to command tar c file1 file2... > combined.tar
-def inBandCreate(files):
+def outBandCreate(files):
     
     for file in files:
         if not os.path.exists(file):                         # Check if path does not exist
@@ -24,7 +24,7 @@ def inBandCreate(files):
 
 
 
-def outBandCreate(files):
+def inBandCreate(files):
     for file in files:                                      # Check if path does not exist
         if not os.path.exists(file):
             os.write(2,("File %s does not exist\n" % file).encode())

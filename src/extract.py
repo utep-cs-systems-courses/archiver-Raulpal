@@ -2,7 +2,7 @@ from io import BufferedReader, FileIO
 import os, stat
 
 # Extract from .tar  file into separate files
-def inBandExtract(tar):
+def outBandExtract(tar):
 
     if not os.path.exists(tar):                              # Check if path does not exist
         os.write(2,("Tar file %s does not exist\n" % tar).encode())
@@ -34,7 +34,7 @@ def inBandExtract(tar):
 
 
 
-def outBandExtract(tar):
+def inBandExtract(tar):
 
     if not os.path.exists(tar):                              # Check if path does not exist
         os.write(2,("Tar file %s does not exist\n" % tar).encode())
